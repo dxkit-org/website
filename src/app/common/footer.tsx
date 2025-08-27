@@ -1,78 +1,125 @@
 "use client";
-import { AiFillFacebook } from "react-icons/ai";
-import { FaSquareInstagram, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaDiscord } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { LuCopyright } from "react-icons/lu";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { socialMedia } from "../constants";
 
 export function Footer() {
-    const router = useRouter();
-    const games = [
+    const projectLinks = [
         {
-            title: "Ludo Adda",
-            href: "/about"
+            title: "DXKit CLI",
+            href: "https://github.com/dxkit-org/dxkit"
         },
         {
-            title: "Cricket Fantasy",
-            href: "/about"
+            title: "Developer Tools",
+            href: "https://github.com/dxkit-org"
         },
-
     ];
 
-    const otherLinks = [
-
+    const communityLinks = [
         {
-            title: "FAQ's",
-            href: "/faqs"
+            title: "GitHub",
+            href: socialMedia.github
         },
         {
-            title: "Contact Us",
-            href: "/contactus"
+            title: "Discord",
+            href: socialMedia.discord
+        },
+        {
+            title: "Contribute",
+            href: "#contribute"
         },
     ];
 
     return (
         <>
-            <footer className="p-6 pb-2 text-center ">
-                <div className="flex flex-col gap-8 sm:grid grid-cols-[2fr_1fr_1fr_1fr] sm:gap-5 pb-[25px] border-b-gray border-b border-solid">
-                    <div>
-                        <Link href='/'>
-                            Logo here
-                        </Link>
-                        <ul className='flex justify-around text-[2.2rem] mt-4'>
+            <footer className="mt-20 border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900">
+                <div className="max-w-6xl mx-auto px-6 py-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div>
+                            <div className="font-bold text-2xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                                DXKit
+                            </div>
+                            <p className="text-gray-600 dark:text-gray-400 mb-4">
+                                Open source organization creating innovative tools for developers.
+                                Join our community and shape the future of development.
+                            </p>
+                            <div className="flex gap-4 text-2xl">
+                                <a
+                                    href={socialMedia.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                                >
+                                    <FaGithub />
+                                </a>
+                                <a
+                                    href={socialMedia.discord}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                                >
+                                    <FaDiscord />
+                                </a>
+                                <a
+                                    href={socialMedia.twitter}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                                >
+                                    <FaXTwitter />
+                                </a>
+                            </div>
+                        </div>
 
-                            <AiFillFacebook className='my-[2px] cursor-pointer hover:opacity-80 transition' onClick={() => router.push(socialMedia.facebook)} />
-                            <FaSquareInstagram className='my-[2px] cursor-pointer hover:opacity-80 transition' onClick={() => router.push(socialMedia.instagram)} />
-                            <FaXTwitter className='my-[2px] cursor-pointer hover:opacity-80 transition' onClick={() => router.push(socialMedia.twitter)} />
-                        </ul>
+                        <div>
+                            <h3 className="font-semibold text-lg mb-4">Projects</h3>
+                            <ul className="space-y-2">
+                                {projectLinks.map((link) => (
+                                    <li key={link.title}>
+                                        <a
+                                            href={link.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                                        >
+                                            {link.title}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 className="font-semibold text-lg mb-4">Community</h3>
+                            <ul className="space-y-2">
+                                {communityLinks.map((link) => (
+                                    <li key={link.title}>
+                                        <a
+                                            href={link.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                                        >
+                                            {link.title}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
 
-                    <div className="text-start">
-                        <h2 className="font-bold text-lg mb-2">Games</h2>
-                        <ul >
-                            {games.map((game) => (
-                                <li key={game.title}><a href={game.href} className='my-[2px] cursor-pointer hover:opacity-80 transition'>{game.title}</a></li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="text-start">
-                        <h2 className="font-bold text-lg mb-2">Other Links</h2>
-                        <ul >
-                            {otherLinks.map((game) => (
-                                <li key={game.title}><a href={game.href} className='my-[2px] cursor-pointer hover:opacity-80 transition'>{game.title}</a></li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="text-start">
-                        <h2 className="font-bold text-lg mb-2">Legal</h2>
-                        <ul >
-                            <li ><Link href='/privacy-policy' className='my-[2px] cursor-pointer hover:opacity-80 transition'>Privacy Policy</Link></li>
-                            <li ><Link href='/terms-and-conditions' className='my-[2px] cursor-pointer hover:opacity-80 transition'>Terms And Conditions</Link></li>
-                        </ul>
+                    <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+                        <div className="flex flex-col sm:flex-row justify-between items-center">
+                            <p className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                                Copyright <LuCopyright className="mx-1" /> 2024 DXKit. All rights reserved.
+                            </p>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 sm:mt-0">
+                                Made with ❤️ by the open source community
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <h2 className="flex items-center font-semibold self-end w-full justify-center text-sm p-2">Copyright &nbsp; <LuCopyright className='pb-[2px]' />2024 Dxkit. All rights reserved.</h2>
             </footer>
         </>
     );

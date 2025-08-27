@@ -10,17 +10,16 @@ import { Footer } from "./common/footer";
 const fontFamily = Bai_Jamjuree({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], display: "swap" });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://primexop.com"),
+    metadataBase: new URL("https://dxkit.com"),
     title: metaData.title,
     description: metaData.description,
     keywords: metaData.keywords,
-
 
     openGraph: {
         title: metaData.title,
         description: metaData.description,
         type: "website",
-        locale: "en_IE",
+        locale: "en_US",
     },
 };
 
@@ -39,8 +38,6 @@ export default function RootLayout({
                 className={fontFamily.className + " bg-[#ffffffec] dark:bg-black dark:text-white "}
                 suppressHydrationWarning={true}
             >
-                {/* TODO: Fix the type error */}
-                {/* @ts-expect-error   unexpected type error */}
                 <Providers>
                     <div className="flex flex-col min-h-screen justify-between  overflow-hidden">
                         <Header />
