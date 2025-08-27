@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "projectType": "nextjs",
+  "assetsTypeGenerator": {
+    "imagesDir": "src/assets/images",
+    "imageNameCase": "kebab-case"
+  }
+}
