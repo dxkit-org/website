@@ -1,8 +1,8 @@
 "use client";
+import { SocialMedia } from "@helpers/constants";
 import { FaGithub, FaDiscord } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { LuCopyright } from "react-icons/lu";
-import { socialMedia } from "../constants";
 
 export function Footer() {
     const projectLinks = [
@@ -19,11 +19,11 @@ export function Footer() {
     const communityLinks = [
         {
             title: "GitHub",
-            href: socialMedia.github
+            href: SocialMedia.github
         },
         {
             title: "Discord",
-            href: socialMedia.discord
+            href: SocialMedia.discord
         },
         {
             title: "Contribute",
@@ -46,7 +46,7 @@ export function Footer() {
                             </p>
                             <div className="flex gap-4 text-2xl">
                                 <a
-                                    href={socialMedia.github}
+                                    href={SocialMedia.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
@@ -54,7 +54,7 @@ export function Footer() {
                                     <FaGithub />
                                 </a>
                                 <a
-                                    href={socialMedia.discord}
+                                    href={SocialMedia.discord}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
@@ -62,7 +62,7 @@ export function Footer() {
                                     <FaDiscord />
                                 </a>
                                 <a
-                                    href={socialMedia.twitter}
+                                    href={SocialMedia.twitter}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition"

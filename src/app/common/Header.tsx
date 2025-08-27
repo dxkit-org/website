@@ -12,7 +12,7 @@ export function Header() {
         { title: "About", path: "#about" },
         { title: "Projects", path: "#projects" },
         { title: "Contribute", path: "#contribute" },
-        { title: "Contact", path: "/contactus" },
+        { title: "Contact", path: "/contact-us" },
     ];
 
     return (

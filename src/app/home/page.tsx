@@ -1,6 +1,6 @@
 "use client";
+import { SocialMedia } from "@helpers/constants";
 import { FaGithub, FaDiscord, FaCode, FaUsers, FaRocket } from "react-icons/fa";
-import { socialMedia } from "../constants";
 
 export default function HomePage() {
     return (
@@ -22,7 +22,7 @@ export default function HomePage() {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                         <a
-                            href={socialMedia.github}
+                            href={SocialMedia.github}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 bg-black dark:bg-white dark:text-black text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition"
@@ -31,7 +31,7 @@ export default function HomePage() {
                             View on GitHub
                         </a>
                         <a
-                            href={socialMedia.discord}
+                            href={SocialMedia.discord}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
@@ -202,7 +202,7 @@ export default function HomePage() {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
-                            href={socialMedia.github}
+                            href={SocialMedia.github}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
@@ -211,7 +211,7 @@ export default function HomePage() {
                             Start Contributing
                         </a>
                         <a
-                            href={socialMedia.discord}
+                            href={SocialMedia.discord}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 bg-white/20 backdrop-blur border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition"

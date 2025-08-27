@@ -3,21 +3,23 @@ import "./globals.css";
 import { Providers } from "./providers";
 import "react-photo-view/dist/react-photo-view.css";
 import { Metadata } from "next";
-import { metaData } from "./constants";
-import { Header } from "./common/header";
-import { Footer } from "./common/footer";
+
+import { MetaData } from "@helpers/constants";
+import { Header } from "@common/Header";
+import { Footer } from "@common/Footer";
+
 
 const fontFamily = Bai_Jamjuree({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], display: "swap" });
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://dxkit.com"),
-    title: metaData.title,
-    description: metaData.description,
-    keywords: metaData.keywords,
+    title: MetaData.title,
+    description: MetaData.description,
+    keywords: MetaData.keywords,
 
     openGraph: {
-        title: metaData.title,
-        description: metaData.description,
+        title: MetaData.title,
+        description: MetaData.description,
         type: "website",
         locale: "en_US",
     },
@@ -30,9 +32,6 @@ export default function RootLayout({
 }>) {
     return (
         <html suppressHydrationWarning={true} lang="en">
-            {/* <head>
-      <link rel="icon" href="favicon.ico" sizes="any" />
-    </head> */}
 
             <body
                 className={fontFamily.className + " bg-[#ffffffec] dark:bg-black dark:text-white "}
