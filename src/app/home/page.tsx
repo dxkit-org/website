@@ -128,7 +128,7 @@ export default function HomePage() {
                             </p>
                             <div className="flex gap-4">
                                 <a
-                                    href="https://github.com/dxkit-org/dxkit"
+                                    href="https://github.com/dxkit-org"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
